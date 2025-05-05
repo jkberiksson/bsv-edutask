@@ -39,6 +39,9 @@ services:
             - REACT_APP_BACKEND_PORT=${PORT_BACKEND}
         ports:
             - '${PORT_FRONTEND}:${PORT_FRONTEND}'
+        volumes:
+            - ./frontend:/app
+            - /app/node_modules # avoid overwriting container's node_modules
         command: npm run start
 
 networks:
