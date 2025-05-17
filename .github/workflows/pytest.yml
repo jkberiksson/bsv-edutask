@@ -26,8 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        if [ -f requirements.pip ]; then pip install -r requirements.pip; fi
+        python -m pip install -r backend/requirements.pip
     - name: pytests of unit tests for the getuserbyemail method
       run: |
-        python -m pytest -m "getuserbyemail"
+        pytest -m "getuserbyemail"
