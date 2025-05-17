@@ -30,4 +30,4 @@ jobs:
         if [ -f requirements.pip ]; then pip install -r requirements.pip; fi
     - name: pytests of unit tests for the getuserbyemail method
       run: |
-        pytest -m "getuserbyemail"
+        python -m pytest -m "getuserbyemail"
